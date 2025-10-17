@@ -16,7 +16,7 @@ function App() {
 
         try {
             setUploadStatus('Uploading...');
-            const res = await axios.post('http://localhost:3002/api/upload', formData, {
+            const res = await axios.post('https://agni-api.onrender.com/api/upload', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
             setUploadedFile(res.data.file.filename);
